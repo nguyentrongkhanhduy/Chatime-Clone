@@ -16,6 +16,9 @@ const itemSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  category: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Item", itemSchema);
