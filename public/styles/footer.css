@@ -16,6 +16,7 @@ footer {
 
 footer img {
   margin-right: 80px;
+  cursor: pointer;
 }
 
 .underline-input {

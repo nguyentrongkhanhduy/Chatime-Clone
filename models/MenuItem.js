@@ -7,7 +7,7 @@ const itemSchema = new mongoose.Schema({
   },
   imgURL: {
     type: String,
-    required: true,
+    required: false,
   },
   description: {
     type: String,
@@ -22,3 +22,12 @@ const itemSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("Item", itemSchema);
+
+// ,
+//     {
+//         "name":"",
+//         "imgURL": "",
+//         "description":"",
+//         "price":0,
+//         "category":""
+//     }

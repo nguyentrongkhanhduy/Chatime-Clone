@@ -1,0 +1,29 @@
+.brand-img {
+  max-width: 100%;
+  margin-bottom: -5px;
+}
+
+.banner-wrapper {
+  position: relative;
+  display: inline-block; /* Keep the image and text within the inline block of the anchor */
+}
+
+.banner-img {
+  display: block; /* Ensure the image takes full width */
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white; /* Make sure the text is visible */
+  font-size: 60px; /* Adjust as needed */
+  font-weight: 700; /* Optional, adjust as necessary */
+  text-align: center;
+  padding: 10px; /* Optional: Padding around the text */
+  border-radius: 5px; /* Optional: Rounded corners */
+  border: 2px solid white;
+}

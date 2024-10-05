@@ -4,9 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/header.css" />
+    <%- include('link') %>
+    <link rel="stylesheet" href="/styles/menu.css" />
   </head>
   <body>
-    <header></header>
+    <%- include('header') %>
+    <main>
+      <ul class="nav-bar">
+        <li>
+          <a class="<%=currentRoute === '/menu'? 'all' : ''%>" href="/menu"
+            >all flavours</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/signature'? 'all' : ''%>"
+            href="/menu/signature"
+            >signature milk tea</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/flavoured'? 'all' : ''%>"
+            href="/menu/flavoured"
+            >flavoured milk tea</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/fruit'? 'all' : ''%>"
+            href="/menu/fruit"
+            >fruit tea</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/specialty'? 'all' : ''%>"
+            href="/menu/specialty"
+            >specialty drinks</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/jelly'? 'all' : ''%>"
+            href="/menu/jelly"
+            >jelly and juice</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/matcha'? 'all' : ''%>"
+            href="/menu/matcha"
+            >matcha</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/brown'? 'all' : ''%>"
+            href="/menu/brown"
+            >brown sugar pearls</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/smoothie'? 'all' : ''%>"
+            href="/menu/smoothie"
+            >smoothie & slush</a
+          >
+        </li>
+      </ul>
+      <div class="menu-description-wrapper">
+        <div class="item-description-wrapper">
+          asd
+        </div>
+        <div class="item-list-wrapper">
+          <%for(let item of listItem){%>
+          <div class="item">
+            <img class="item-img" src="img/Chatime-Pearl-Milk-Tea.png" alt="" />
+            <p class="item-name"><%=item.name%></p>
+            <p class="item-price">$ <%=item.price%></p>
+          </div>
+          <%}%>
+        </div>
+      </div>
+    </main>
+    <%- include('footer') %>
   </body>
 </html>
