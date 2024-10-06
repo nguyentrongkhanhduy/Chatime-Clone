@@ -74,13 +74,15 @@
         </li>
       </ul>
       <div class="menu-description-wrapper">
-        <div class="item-description-wrapper">
-          asd
-        </div>
+        <div class="item-description-wrapper">asd</div>
         <div class="item-list-wrapper">
           <%for(let item of listItem){%>
           <div class="item">
-            <img class="item-img" src="img/Chatime-Pearl-Milk-Tea.png" alt="" />
+            <img
+              class="item-img"
+              src="<%=item.imgURL%>"
+              alt="/img/Chatime-Pearl-Milk-Tea.png"
+            />
             <p class="item-name"><%=item.name%></p>
             <p class="item-price">$ <%=item.price%></p>
           </div>

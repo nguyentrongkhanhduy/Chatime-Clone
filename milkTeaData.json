@@ -1,8 +1,71 @@
 [
     {
         "name":"Chatime Pearl Milk Tea",
-        "imgURL": "",
+        "imgURL": "/img/Chatime-Pearl-Milk-Tea.png",
         "description":"Tapioca pearls add a pleasant texture to our signature milk tea, a best-selling fan favourite. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Chatime Roasted Milk Tea",
+        "imgURL": "/img/Roasted-Milk-Tea.png",
+        "description":"One of our most popular milk teas, Japanese Roasted Tea! Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Chatime Signature Milk Tea",
+        "imgURL": "/img/Chatime-Milk-Tea.png",
+        "description":"Our world famous milk tea, brewed from premium loose leaf black tea. Delicious and classic. For the tea lovers! Select any of our tea bases and have it made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Chatime Triple",
+        "imgURL": "/img/The-Chatime-Triple-Milk-Tea.png",
+        "description":"Our popular roasted milk tea paired with our top three toppings: pearls, grass jelly, and pudding to create a decadent and flavourful combination. Perfect for when you want it all! Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Earl Grey Milk Tea",
+        "imgURL": "/img/Earl-Grey-Milk-Tea.png",
+        "description":"One of the most recognized flavoured teas in the world: bold and rich with a subtle hint of citrus and bergamot. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Genmaicha Milk Tea",
+        "imgURL": "/img/Brown-Rice-Green-Milk-Tea.png",
+        "description":"Rich and smooth with a subtle aroma of roasted rice. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Golden Lily Milk Tea",
+        "imgURL": "/img/Golden-Lily-Tea-Latte.png",
+        "description":"Our Golden Lily is an Alishan JinShyuan Tea that has a naturally creamy texture with an added hint of floral notes. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Grass Jelly Roasted Milk Tea",
+        "imgURL": "/img/Grass-Jelly_Roasted-Milk-Tea.png",
+        "description":"Our most popular drink! Grass jelly adds a satisfying texture to our delicious classic roasted milk tea. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Iron Goddess Milk Tea",
+        "imgURL": "/img/Iron-Goddess-Milk-Tea-1.png",
+        "description":"An Oolong-style tea, called Tieguanyin, that features a deep, robust flavour. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
+        "price":0,
+        "category":"signature milk tea"
+    },
+    {
+        "name":"Jasmine Jade Green Milk Tea",
+        "imgURL": "/img/Jasmine-Tea-Latte.png",
+        "description":"A fragrant and delicate brew, paired with the rich creaminess of milk tea. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
         "price":0,
         "category":"signature milk tea"
     },
