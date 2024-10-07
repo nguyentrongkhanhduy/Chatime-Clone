@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -14,7 +13,7 @@ app.use(express.static("public"));
 const port = process.env.PORT;
 const databaseConnectString = process.env.MONGODB_URI;
 
-const createData = require("./script/seedData");
+const createData = require("./seedData");
 
 const startServer = async () => {
   try {
@@ -34,5 +33,7 @@ app.get("/", (req, res) => {
 });
 
 const menuRoutes = require("./routes/menu");
+const orderRoutes = require("./routes/order");
 
 app.use("/menu", menuRoutes);
+app.use("/order", orderRoutes);

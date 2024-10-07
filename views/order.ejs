@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('link') %>
+    <link rel="stylesheet" href="/styles/order.css" />
+  </head>
+  <body>
+    <%- include('header') %>
+    <main>
+      <div class="summary">
+        <h1>Order Summary</h1>
+      </div>
+
+      <div class="ordering-wrapper">
+        <div class="ordering-item-container">
+          <img src="<%=orderingItem.imgURL%>" alt="" />
+          <div class="ordering-item-info">
+            <div class="label">
+              <p>Name:</p>
+              <p>Price:</p>
+              <p>Tax (13%):</p>
+              <p>Total:</p>
+            </div>
+            <div class="info">
+              <p><%=orderingItem.name%></p>
+              <p id="item-price">$ <%=orderingItem.price%></p>
+              <p id="item-tax">
+                $ <%= (orderingItem.price * 0.13).toFixed(2) %>
+              </p>
+              <p id="total-price">
+                $ <%= (orderingItem.price*0.13+orderingItem.price).toFixed(2) %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ordering-info">
+          <h1>Customer Information</h1>
+          <form class="ordering-form" action="/oder/success" method="post">
+            <p>Name:</p>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              required
+            />
+            <p>Address:</p>
+            <input
+              type="text"
+              placeholder="Enter your address"
+              name="address"
+              required
+            />
+            <p>Phone Number:</p>
+            <input
+              type="tel"
+              placeholder="Enter your phone number"
+              name="phone-number"
+              required
+            />
+            <div class="tip-section">
+              <p>Tip:</p>
+              <select name="tip" id="tip">
+                <option value="0" selected>No tip</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include('footer') %>
+
+    <script src="/script/order.js"></script>
+  </body>
+</html>

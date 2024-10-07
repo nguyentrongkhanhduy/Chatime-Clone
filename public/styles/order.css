@@ -1,0 +1,92 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary {
+  background-color: #693f7f;
+  padding: 20px;
+}
+
+.summary h1 {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+.ordering-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-grow: 1;
+}
+
+.ordering-item-container {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the background image */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.ordering-item-container img {
+  height: 300px; /* Set height */
+  width: auto;
+}
+
+.ordering-item-info {
+  display: flex;
+  gap: 20px;
+}
+
+.label p {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.info p {
+  font-size: 22px;
+  font-weight: 300;
+  text-align: end;
+}
+
+.ordering-info h1 {
+  text-align: center;
+}
+
+.ordering-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ordering-form input {
+  width: 600px;
+  font-size: 20px;
+}
+
+.ordering-form select {
+  width: 100px;
+  font-size: 20px;
+}
+
+.ordering-form p {
+  font-weight: bold;
+  font-size: 22px;
+  text-align: start;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.tip-section {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.tip-section p {
+  margin-top: 0;
+}

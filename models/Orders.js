@@ -13,14 +13,22 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    phone: {
+      type: Number,
+      required: true,
+    },
     deliAddress: {
       type: String,
       required: true,
     },
     itemOrdered: {
-      type: mongoose.SchemaType.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "MenuItem",
       required: true,
+    },
+    tip: {
+      type: String,
+      required: false,
     },
   },
   { timestamps: true }

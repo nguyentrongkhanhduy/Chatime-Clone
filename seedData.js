@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-const item = require("../models/MenuItem");
-require("dotenv").config({ path: "../.env" });
+const item = require("./models/MenuItem");
+require("dotenv").config();
 
 const fs = require("fs").promises;
-const filePath = "milkTeaData.json";
+const filePath = "./milkTeaData.json";
 
 const createData = async () => {
   try {
