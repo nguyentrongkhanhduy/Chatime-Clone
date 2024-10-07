@@ -18,36 +18,36 @@
         </li>
         <li>
           <a
-            class="<%=currentRoute === '/signature'? 'all' : ''%>"
-            href="/menu/signature"
+            class="<%=currentRoute === '/signature-milk-tea'? 'all' : ''%>"
+            href="/menu/signature-milk-tea"
             >signature milk tea</a
           >
         </li>
         <li>
           <a
-            class="<%=currentRoute === '/flavoured'? 'all' : ''%>"
-            href="/menu/flavoured"
+            class="<%=currentRoute === '/flavoured-milk-tea'? 'all' : ''%>"
+            href="/menu/flavoured-milk-tea"
             >flavoured milk tea</a
           >
         </li>
         <li>
           <a
-            class="<%=currentRoute === '/fruit'? 'all' : ''%>"
-            href="/menu/fruit"
+            class="<%=currentRoute === '/fruit-tea'? 'all' : ''%>"
+            href="/menu/fruit-tea"
             >fruit tea</a
           >
         </li>
         <li>
           <a
-            class="<%=currentRoute === '/specialty'? 'all' : ''%>"
-            href="/menu/specialty"
+            class="<%=currentRoute === '/specialty-drinks'? 'all' : ''%>"
+            href="/menu/specialty-drinks"
             >specialty drinks</a
           >
         </li>
         <li>
           <a
-            class="<%=currentRoute === '/jelly'? 'all' : ''%>"
-            href="/menu/jelly"
+            class="<%=currentRoute === '/jelly-and-juice'? 'all' : ''%>"
+            href="/menu/jelly-and-juice"
             >jelly and juice</a
           >
         </li>
@@ -60,24 +60,34 @@
         </li>
         <li>
           <a
-            class="<%=currentRoute === '/brown'? 'all' : ''%>"
-            href="/menu/brown"
+            class="<%=currentRoute === '/brown-sugar-pearls'? 'all' : ''%>"
+            href="/menu/brown-sugar-pearls"
             >brown sugar pearls</a
           >
         </li>
         <li>
           <a
-            class="<%=currentRoute === '/smoothie'? 'all' : ''%>"
-            href="/menu/smoothie"
+            class="<%=currentRoute === '/smoothie-&-slush'? 'all' : ''%>"
+            href="/menu/smoothie-&-slush"
             >smoothie & slush</a
           >
         </li>
       </ul>
       <div class="menu-description-wrapper">
-        <div class="item-description-wrapper">asd</div>
+        <div class="item-description-container">
+          <div class="item-description-wrapper">
+            <h1><%=randomItem.name%></h1>
+            <h3><%=randomItem.description%></h3>
+            <img src="<%=randomItem.imgURL%>" alt="" />
+            <h2>$ <%=randomItem.price%></h2>
+            <a class="button-to-order" href="">
+              <button class="order-button">Order now</button>
+            </a>
+          </div>
+        </div>
         <div class="item-list-wrapper">
           <%for(let item of listItem){%>
-          <div class="item">
+          <a class="item" href="/menu/<%=item._id%>">
             <img
               class="item-img"
               src="<%=item.imgURL%>"
@@ -85,7 +95,7 @@
             />
             <p class="item-name"><%=item.name%></p>
             <p class="item-price">$ <%=item.price%></p>
-          </div>
+          </a>
           <%}%>
         </div>
       </div>

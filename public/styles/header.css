@@ -8,6 +8,8 @@ header {
 
 header img {
   cursor: pointer;
+  height: 30px;
+  width: 150px;
 }
 
 .icon-list-header {
@@ -35,7 +37,7 @@ svg {
   fill: white;
 }
 
-header ul{
+header ul {
   list-style-type: none;
   display: flex;
 }
