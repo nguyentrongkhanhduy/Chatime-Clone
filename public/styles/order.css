@@ -25,11 +25,17 @@ main {
   background-repeat: no-repeat; /* Prevent image from repeating */
   background-size: cover; /* Ensure the image covers the entire area */
   background-position: center; /* Center the background image */
-  color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 40px;
+  justify-content: start;
+  color: white;
+}
+
+.inside-container {
+  display: flex;
+  align-items: center;
+  width: 700px;
 }
 
 .ordering-item-container img {
@@ -38,19 +44,20 @@ main {
 }
 
 .ordering-item-info {
+  flex-grow: 1;
   display: flex;
-  gap: 20px;
-}
-
-.label p {
-  font-weight: 900;
-  font-size: 22px;
+  justify-content: space-between;
 }
 
 .info p {
+  font-weight: 900;
+  font-size: 22px;
+  text-align: end;
+}
+
+.label p {
   font-size: 22px;
   font-weight: 300;
-  text-align: end;
 }
 
 .ordering-info h1 {
@@ -58,6 +65,12 @@ main {
 }
 
 .ordering-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ordering-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,4 +102,27 @@ main {
 
 .tip-section p {
   margin-top: 0;
+}
+
+.submit-order-button {
+  margin-top: 20px;
+  border: none;
+  color: white;
+  background-color: rgb(114, 183, 10);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 200px;
+  background-color: rgb(114, 183, 10);
+  transition: background-color 0.2s;
+}
+
+.submit-order-button:hover {
+  background-color: rgb(151, 225, 40);
+}
+
+.submit-order-button:active {
+  background-color: rgb(114, 183, 10);
 }
