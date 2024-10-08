@@ -126,3 +126,101 @@ main {
 .submit-order-button:active {
   background-color: rgb(114, 183, 10);
 }
+
+.order-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-grow: 1;
+}
+
+.ordered-drink {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.ordered-drink img {
+  height: 300px;
+  width: auto;
+}
+
+.ordered-drink p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ordered-info {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.ordered-customer-info {
+  flex-grow: 1;
+}
+
+.ordered-customer-info p {
+  text-align: end;
+  font-weight: bold;
+}
+
+.search-order {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 30px;
+}
+
+.search-order input {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.search-order button {
+  border: none;
+  color: white;
+  background-color: rgb(114, 183, 10);
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.search-order button:hover {
+  background-color: rgb(151, 225, 40);
+}
+
+.search-order button:active {
+  background-color: rgb(114, 183, 10);
+}
+
+.order-information {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.order-information p {
+  font-size: 20px;
+}
+
+.oder-customer-information {
+  font-weight: bold;
+  text-align: end;
+  min-width: 450px;
+}
+
+.no-order {
+  margin-top: 30px;
+}

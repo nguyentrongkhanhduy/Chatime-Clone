@@ -17,7 +17,7 @@ const createData = require("./seedData");
 
 const startServer = async () => {
   try {
-    createData();
+    // createData();
     await mongoose.connect(databaseConnectString);
     console.log("Database connected!");
     console.log(`Server is running on http://localhost:${port}`);

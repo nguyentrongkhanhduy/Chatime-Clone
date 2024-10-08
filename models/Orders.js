@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const MenuItem = require("./MenuItem");
+const DeliveryMan = require("./Driver");
 
 const orderSchema = new mongoose.Schema(
   {
@@ -28,6 +29,11 @@ const orderSchema = new mongoose.Schema(
     },
     tip: {
       type: String,
+      required: false,
+    },
+    deliverMan: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "DeliveryMan",
       required: false,
     },
   },

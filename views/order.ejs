@@ -10,9 +10,74 @@
   <body>
     <%- include('header') %>
     <main>
-      <%if(ordered === true) {%>
-      <h1>Order Summary</h1>
-      <%} else { %>
+      <%if(ordered === true) {%> <%if(!orderingItem){ %>
+      <div class="summary">
+        <h1>Check Your Order Status</h1>
+      </div>
+      <div class="search-order">
+        <form action="/order/check/order" method="post">
+          <input
+            type="text"
+            placeholder="Enter your order number"
+            name="odId"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+        <%if(display) {%> <%if(info){%>
+        <h1>Your order</h1>
+        <div class="order-information">
+          <div>
+            <p>Name:</p>
+            <p>Address:</p>
+            <p>Phone:</p>
+            <p>Drink ordered:</p>
+            <p>Order time:</p>
+            <p>Status:</p>
+          </div>
+          <div class="oder-customer-information">
+            <p><%=info.order.cusName%></p>
+            <p><%=info.order.deliAddress%></p>
+            <p><%=info.order.phone%></p>
+            <p><%=info.order.itemOrdered.name%></p>
+            <p><%=info.date%> at <%=info.time%></p>
+            <p><%=info.order.status%></p>
+          </div>
+        </div>
+        <%} else {%>
+        <div>
+          <h1 class="no-order">No order found!</h1>
+        </div>
+        <%}%> <%}%>
+      </div>
+      <%} else {%>
+      <div class="summary">
+        <h1>Order Summary</h1>
+      </div>
+
+      <div class="order-summary">
+        <div class="ordered-drink">
+          <img src="<%=orderingItem.imgURL%>" alt="" />
+          <p><%=orderingItem.name%></p>
+        </div>
+        <div class="ordered-info">
+          <div class="odered-customer-label">
+            <p>Order No:</p>
+            <p>Customer name:</p>
+            <p>Address:</p>
+            <p>Phone number:</p>
+            <p>Paid:</p>
+          </div>
+          <div class="ordered-customer-info">
+            <p><%=info.odId%></p>
+            <p><%=info.name%></p>
+            <p><%=info.address%></p>
+            <p><%=info.phone%></p>
+            <p>$ <%=info.paid%></p>
+          </div>
+        </div>
+      </div>
+      <%}%> <%} else { %>
       <div class="summary">
         <h1>Order Form</h1>
       </div>
@@ -47,7 +112,7 @@
           <h1>Customer Information</h1>
           <form
             class="ordering-form"
-            action="/oder/<%=orderingItem._id/1%>"
+            action="/order/start/<%=orderingItem._id%>/1"
             method="post"
           >
             <div>
@@ -69,9 +134,19 @@
               <input
                 type="tel"
                 placeholder="Enter your phone number"
-                name="phone-number"
+                name="phoneNumber"
                 required
               />
+              <p>Card Number:</p>
+              <input
+                type="text"
+                maxlength="10"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                placeholder="Enter your card number"
+                required
+                name="cardNumber"
+              />
+
               <div class="tip-section">
                 <p>Tip:</p>
                 <select name="tip" id="tip">
