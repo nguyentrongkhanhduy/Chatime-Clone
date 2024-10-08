@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('link') %>
+    <link rel="stylesheet" href="/styles/authenticate.css" />
+  </head>
+  <body>
+    <%- include('header') %>
+    <main>
+      <div class="log-in-container">
+        <h1>Log in</h1>
+        <div class="log-in-form-container">
+          <form action="" method="post">
+            <p>Username:</p>
+            <input
+              type="text"
+              name="username"
+              placeholder="Enter your Username"
+              required
+            />
+            <p>Password:</p>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your Password"
+              required
+            />
+          </form>
+          <div class="log-in-button-container">
+            <button class="log-in-button" type="submit">Log in</button>
+          </div>
+        </div>
+      </div>
+      <div class="sign-up-container">
+        <h1>Sign up</h1>
+        <select name="role" id="role">
+          <option value="" disabled selected>Select your role</option>
+          <option value="admin">Store Owner</option>
+          <option value="driver">Delivery Man</option>
+        </select>
+        <div class="sign-up-form-container">
+          <form action="" method="post">
+            <p>Username:</p>
+            <input
+              type="text"
+              name="username"
+              placeholder="Enter your Username"
+              required
+            />
+            <p>Password:</p>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your Password"
+              required
+            />
+          </form>
+          <div class="sign-up-button-container">
+            <button class="sign-up-button" type="submit">Sign up</button>
+          </div>
+        </div>
+        <div class="sign-up-as-driver-container">
+          <form action="" method="post">
+            <div>
+              <div>
+                <p>Username:</p>
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Enter your Username"
+                  required
+                />
+                <p>Password:</p>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter your Password"
+                  required
+                />
+                <p>Full name:</p>
+                <input
+                  type="text"
+                  name="full-name"
+                  placeholder="Enter your Full name"
+                  required
+                />
+              </div>
+              <div>
+                <p>Vehicle model:</p>
+                <input
+                  type="text"
+                  name="vehicle-model"
+                  placeholder="Enter your Vehicle model"
+                  required
+                />
+                <p>Vehicle color:</p>
+                <input
+                  type="text"
+                  name="vehicle-color"
+                  placeholder="Enter your Vehicle color"
+                  required
+                />
+                <p>License plate:</p>
+                <input
+                  type="text"
+                  name="license-plate"
+                  placeholder="Enter your License plate"
+                  required
+                />
+              </div>
+            </div>
+            <div class="sign-up-button-container">
+              <button class="sign-up-button" type="submit">Sign up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <%- include('footer') %>
+
+    <script src="/script/authenticate.js"></script>
+  </body>
+</html>
