@@ -42,7 +42,7 @@ router.post("/start/:id/:ordered?", async (req, res) => {
             (thisItem[0].price * (tip / 100) + thisItem[0].price) * (13 / 100) +
             (thisItem[0].price * (tip / 100) + thisItem[0].price);
 
-          console.log(thisItem[0]._id);
+          // console.log(thisItem[0]._id);
 
           const newOrder = await Order.create({
             cusName: name,

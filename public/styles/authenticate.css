@@ -16,7 +16,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
 }
 
 .log-in-form-container {
@@ -25,6 +24,7 @@ h1 {
   color: black;
   border: 5px double #693f7f;
   border-radius: 20px;
+  margin-top: 50px;
 }
 
 .log-in-form-container p {
@@ -68,6 +68,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .sign-up-container h1 {
@@ -77,7 +78,12 @@ h1 {
 #role {
   font-size: 15px;
   padding: 5px 30px;
-  margin-bottom: 29px;
+}
+
+.role-selector-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .sign-up-form-container {
@@ -134,7 +140,6 @@ h1 {
   color: white;
   border: 5px solid #693f7f;
   border-radius: 20px;
-  margin-bottom: 50px;
   display: none;
 }
 

@@ -57,11 +57,14 @@
     <li>
       <a href="/order/check">Check your order</a>
     </li>
+    <%if(!session.isLoggedIn) {%>
     <li>
       <a href="/authenticate">Log in</a>
     </li>
+    <%} else {%>
     <li>
-      <a href="#">Log out</a>
+      <a href="/authenticate/logout">Log out</a>
     </li>
+    <%}%>
   </ul>
 </header>

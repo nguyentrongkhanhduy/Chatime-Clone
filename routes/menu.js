@@ -132,7 +132,7 @@ router.get("/smoothie-&-slush", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const thisItem = await Item.find({ _id: req.params.id });
-    console.log(thisItem);
+    // console.log(thisItem);
 
     if (thisItem.length !== 0) {
       const category = thisItem[0].category;

@@ -13,6 +13,20 @@ app.use(express.static("public"));
 const port = process.env.PORT;
 const databaseConnectString = process.env.MONGODB_URI;
 
+const session = require("express-session");
+app.use(
+  session({
+    secret: "the final project for course MADS4012", // random string, used for configuring the session
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+app.use((req, res, next) => {
+  res.locals.session = req.session;
+  next();
+});
+
 const createData = require("./seedData");
 
 const startServer = async () => {
@@ -38,4 +52,4 @@ const authenticateRoutes = require("./routes/authenticate");
 
 app.use("/menu", menuRoutes);
 app.use("/order", orderRoutes);
-app.use("/authenticate", authenticateRoutes);
+app.use("/", authenticateRoutes);

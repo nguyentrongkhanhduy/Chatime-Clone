@@ -13,7 +13,7 @@
       <div class="log-in-container">
         <h1>Log in</h1>
         <div class="log-in-form-container">
-          <form action="" method="post">
+          <form action="/authenticate/login" method="post">
             <p>Username:</p>
             <input
               type="text"
@@ -28,21 +28,30 @@
               placeholder="Enter your Password"
               required
             />
+            <div class="log-in-button-container">
+              <button class="log-in-button" type="submit">Log in</button>
+            </div>
           </form>
-          <div class="log-in-button-container">
-            <button class="log-in-button" type="submit">Log in</button>
-          </div>
         </div>
+        <%if(wrong){%>
+        <p style="color: red">
+          Incorrect Usernam or Password. Please try again.
+        </p>
+        <%}%>
       </div>
       <div class="sign-up-container">
         <h1>Sign up</h1>
-        <select name="role" id="role">
-          <option value="" disabled selected>Select your role</option>
-          <option value="admin">Store Owner</option>
-          <option value="driver">Delivery Man</option>
-        </select>
+        <div class="role-selector-container">
+          <h3>Select your role:</h3>
+          <select name="role" id="role">
+            <option value="" disabled selected></option>
+            <option value="admin">Store Owner</option>
+            <option value="driver">Delivery Man</option>
+          </select>
+        </div>
+
         <div class="sign-up-form-container">
-          <form action="" method="post">
+          <form action="/authenticate/owner" method="post">
             <p>Username:</p>
             <input
               type="text"
@@ -57,13 +66,13 @@
               placeholder="Enter your Password"
               required
             />
+            <div class="sign-up-button-container">
+              <button class="sign-up-button" type="submit">Sign up</button>
+            </div>
           </form>
-          <div class="sign-up-button-container">
-            <button class="sign-up-button" type="submit">Sign up</button>
-          </div>
         </div>
         <div class="sign-up-as-driver-container">
-          <form action="" method="post">
+          <form action="/authenticate/driver" method="post">
             <div>
               <div>
                 <p>Username:</p>
@@ -83,7 +92,7 @@
                 <p>Full name:</p>
                 <input
                   type="text"
-                  name="full-name"
+                  name="fullName"
                   placeholder="Enter your Full name"
                   required
                 />
@@ -92,21 +101,21 @@
                 <p>Vehicle model:</p>
                 <input
                   type="text"
-                  name="vehicle-model"
+                  name="model"
                   placeholder="Enter your Vehicle model"
                   required
                 />
                 <p>Vehicle color:</p>
                 <input
                   type="text"
-                  name="vehicle-color"
+                  name="color"
                   placeholder="Enter your Vehicle color"
                   required
                 />
                 <p>License plate:</p>
                 <input
                   type="text"
-                  name="license-plate"
+                  name="plate"
                   placeholder="Enter your License plate"
                   required
                 />
@@ -117,6 +126,12 @@
             </div>
           </form>
         </div>
+
+        <%if(same){%>
+        <p style="color: red">The user already exists!</p>
+        <%} else {%> <%if(created) {%>
+        <p style="color: green">Your account has been created!</p>
+        <%}%> <%}%>
       </div>
     </main>
 
