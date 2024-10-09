@@ -41,6 +41,7 @@ nav a:hover {
 nav .active {
     color: yellow;
     text-decoration: underline;
+    font-size: 18px;
 }
 
 .order-info-container{
@@ -84,5 +85,4 @@ h3 {
 
 .margin-bottom {
     margin-bottom: 24px;
-    font-size: 18px;
 }
