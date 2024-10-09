@@ -97,7 +97,7 @@ router.post("/authenticate/login", async (req, res) => {
           const thisDriver = await Driver.find({ username: username });
           req.session.role = "driver";
           req.session.driver = thisDriver[0];
-          return res.redirect("/driver");
+          return res.redirect("/");
         }
       } else {
         return res.render("authenticate.ejs", {

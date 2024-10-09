@@ -37,7 +37,7 @@
                             <%- include('driver-order-info', { order: order }) %>
                             <p>Status: <%= order.status %></p>
                             <form action="/driver/complete/<%= order._id %>" method="post" enctype="multipart/form-data">
-                                <input type="file" name="userFile">
+                                <input type="file" name="userFile" required>
                                 <input type="submit" value="Complete Delivery">
                             </form>
                         </div>

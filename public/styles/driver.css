@@ -16,6 +16,7 @@ main {
 }
 nav {
     background-color: #693f7f;
+    list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,4 +39,5 @@ nav a:hover {
 nav .active {
     color: yellow;
     text-decoration: underline;
+    font-size: 18px;
 }

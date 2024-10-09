@@ -58,7 +58,8 @@ router.post("/complete/:id", upload.single("userFile"), async (req, res) => {
         if (!req.file) {
             return res.status(500).send("No file uploaded.");
         }
-        const order = await Order.findByIdAndUpdate(req.params.id, {status: "DELIVERED", imgURL: req.file.path});
+        const publicPath = '/' + req.file.path.replace(/^public[\\/]/, '').replace(/\\/g, '/');
+        const order = await Order.findByIdAndUpdate(req.params.id, {status: "DELIVERED", imgURL: publicPath});
         res.redirect("/driver/fulfillment");
     } catch (error) {
         return res.status(500).send(error.message);

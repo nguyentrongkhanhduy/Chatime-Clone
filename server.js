@@ -43,6 +43,13 @@ const startServer = async () => {
 app.listen(port, startServer);
 
 app.get("/", (req, res) => {
+  if (req.session.hasOwnProperty("isLoggedIn") === true) {
+    if (req.session.role === "owner") {
+      return res.redirect("/list");
+    } else {
+      return res.redirect("/driver");
+    }
+  }
   return res.render("home.ejs");
 });
 
