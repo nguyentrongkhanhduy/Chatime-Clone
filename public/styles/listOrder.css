@@ -1,0 +1,130 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar {
+  background-color: #693f7f;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-bar a:hover {
+  color: #a7a7a7;
+}
+
+.nav-bar a.all {
+  color: rgb(0, 180, 141);
+  font-size: 18px;
+}
+
+.list-order-wrapper {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the background image */
+  display: flex;
+  justify-content: center;
+  height: 700px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 660px;
+}
+
+.single-order-container {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.order-deliver-info {
+  display: flex;
+  gap: 50px;
+}
+
+.proof {
+  display: flex;
+}
+
+.proof img {
+  height: 100px;
+}
+
+.single-order {
+  display: flex;
+  gap: 30px;
+}
+
+.deliverMan-info p {
+  font-weight: bold;
+}
+
+.oder-customer-information p {
+  font-weight: bold;
+}
+
+.del-info {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.delivery-status-wrapper button {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the background image */
+  color: white;
+  font-weight: bold;
+  padding: 5px 30px;
+  border: none;
+  border-radius: 10px;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.delivery-status-wrapper button:hover {
+  opacity: 0.9;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.delivery-status-wrapper button:active {
+  opacity: 1;
+  box-shadow: none;
+}
+
+.READY {
+  color: green;
+}
+
+.IN {
+  color: blue;
+}
+
+.DELIVERED {
+  color: red;
+}

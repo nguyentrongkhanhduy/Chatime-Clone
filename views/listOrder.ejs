@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('link') %>
+    <link rel="stylesheet" href="/styles/listOrder.css" />
+  </head>
+  <body>
+    <%- include('header') %>
+    <main>
+      <ul class="nav-bar">
+        <li>
+          <a href="/list" class="<%=currentRoute === '/list'? 'all' : ''%>">
+            all orders
+          </a>
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/ready'? 'all' : ''%>"
+            href="/list/ready"
+          >
+            ready for delivery
+          </a>
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/transit'? 'all' : ''%>"
+            href="/list/transit"
+          >
+            in transit
+          </a>
+        </li>
+        <li>
+          <a
+            class="<%=currentRoute === '/delivered'? 'all' : ''%>"
+            href="/list/delivered"
+          >
+            delivered
+          </a>
+        </li>
+      </ul>
+      <div class="list-order-wrapper">
+        <div class="list-container">
+          <%if(listOrder.length === 0){%>
+          <h1>No order.</h1>
+          <%} else {%> <%for(let order of listOrder){%>
+          <div class="single-order-container">
+            <div class="single-order">
+              <div>
+                <p>Order id:</p>
+                <p>Customer name:</p>
+                <p>Address:</p>
+                <p>Phone:</p>
+                <p>Drink ordered:</p>
+                <p>Order time:</p>
+                <p>Paid:</p>
+                <p>Status:</p>
+              </div>
+              <div class="oder-customer-information">
+                <p><%=order._id%></p>
+                <p><%=order.cusName%></p>
+                <p><%=order.deliAddress%></p>
+                <p><%=order.phone%></p>
+                <p><%=order.itemOrdered.name%></p>
+                <p><%=order.createdAt%></p>
+                <%const ogPrice = order.itemOrdered.price%> <%const tip =
+                order.tip%> <%const getTip = tip.substring(0, tip.length - 1)%>
+                <%const tipValue = ogPrice*parseInt(getTip)/100%> <%const tax =
+                (ogPrice+tipValue)*0.13%> <%const paid = ogPrice + tipValue +
+                tax%>
+                <p>
+                  $ <%=paid.toFixed(2)%> <%if(tipValue > 0) {%>
+                  <span>(Tip: <%=tip%>)</span>
+                  <%}%>
+                </p>
+                <div class="delivery-status-wrapper">
+                  <p class="<%=order.status.split(' ')[0]%>">
+                    <%=order.status%>
+                  </p>
+                  <%const strArr = ["DELIVERED", "IN TRANSIT"] %>
+                </div>
+              </div>
+            </div>
+            <%if(strArr.includes(order.status)) {%>
+            <p class="del-info">Delivery Information</p>
+            <div class="order-deliver-info">
+              <div>
+                <p>Driver name:</p>
+                <p>License plate:</p>
+              </div>
+              <div class="deliverMan-info">
+                <p><%=order.deliverMan.name%></p>
+                <p><%=order.deliverMan.plate%></p>
+              </div>
+            </div>
+            <%if(order.status === "DELIVERED"){%>
+            <div class="proof">
+              <p>Proof of delivery:</p>
+              <img src="<%=order.imgURL%>" alt="" />
+            </div>
+            <%}%> <%}%>
+          </div>
+
+          <%}%> <%}%>
+        </div>
+      </div>
+    </main>
+    <%- include('footer') %>
+  </body>
+</html>

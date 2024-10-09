@@ -54,14 +54,22 @@
     <img src="/img/chatime-logo-white.svg" alt="" />
   </a>
   <ul>
+    <%if(!session.isLoggedIn) {%>
     <li>
       <a href="/order/check">Check your order</a>
     </li>
-    <%if(!session.isLoggedIn) {%>
     <li>
       <a href="/authenticate">Log in</a>
     </li>
+    <%} else {%> <%if(session.role === "owner"){%>
+    <li>
+      <a href="/list">Check order</a>
+    </li>
     <%} else {%>
+    <li>
+      <a href="">Deliver order</a>
+    </li>
+    <%}%>
     <li>
       <a href="/authenticate/logout">Log out</a>
     </li>

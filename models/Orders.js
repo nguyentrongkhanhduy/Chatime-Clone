@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const MenuItem = require("./MenuItem");
-const DeliveryMan = require("./Driver");
+const Driver = require("./Driver");
 
 const orderSchema = new mongoose.Schema(
   {
@@ -33,8 +33,13 @@ const orderSchema = new mongoose.Schema(
     },
     deliverMan: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "DeliveryMan",
+      ref: "Driver",
       required: false,
+    },
+    imgURL: {
+      type: String,
+      required: false,
+      default: "/img/delivered.jpg",
     },
   },
   { timestamps: true }
