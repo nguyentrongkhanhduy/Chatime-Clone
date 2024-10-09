@@ -5,7 +5,7 @@ const driverSchema = new mongoose.Schema(
     username: {
       type: String,
       required: true,
-      uniqure: true,
+      unique: true,
     },
     password: {
       type: String,

@@ -1,0 +1,41 @@
+main {
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.error-message {
+    background-color: red;
+    padding: 24px;
+    border-radius: 60px;
+    margin: 24px auto;
+    width: fit-content;
+    font-size: larger;
+    font-weight: bold;
+}
+nav {
+    background-color: #693f7f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+  
+nav a:hover {
+    color: #a7a7a7;
+}
+nav .active {
+    color: yellow;
+    text-decoration: underline;
+}

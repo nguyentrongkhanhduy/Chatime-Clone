@@ -48,8 +48,10 @@ app.get("/", (req, res) => {
 
 const menuRoutes = require("./routes/menu");
 const orderRoutes = require("./routes/order");
+const driverRoutes = require("./routes/driver");
 const authenticateRoutes = require("./routes/authenticate");
 
 app.use("/menu", menuRoutes);
 app.use("/order", orderRoutes);
+app.use("/driver", driverRoutes);
 app.use("/", authenticateRoutes);

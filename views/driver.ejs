@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver</title>
+    <%- include('link') %>
+    <link rel="stylesheet" href="/styles/driver.css" />
+</head>
+<body>
+    <%- include('header', { session: session }) %>
+    <main>
+        <% if (session.isLoggedIn && session.role === "driver") { %>
+            <nav>
+                <a href="/driver/open-orders" class="<%= currentPath === "/open-orders" ? 'active' : '' %>">Open Orders</a>
+                <a href="/driver/fulfillment" class="<%= currentPath === "/fulfillment" ? 'active' : '' %>">My Delivery Fulfillment</a>
+            </nav>
+            <% if (currentPath === "/open-orders") { %>
+                <% if (orders.length === 0) { %>
+                    <p class="error-message">No open orders for now.</p>
+                <% } else { %>
+                    <% for (let order of orders) { %>
+                        <div>
+                            <%- include('driver-order-info', { order: order }) %>
+                            <form action="/driver/select/<%= order._id %>" method="post">
+                                <input type="submit" value="Deliver Order">
+                            </form>
+                        </div>
+                    <% } %>
+                <% } %>
+            <% } else { %>
+                <% if (orders.length === 0) { %>
+                    <p class="error-message">You do not have deliveries for now, you can select from <a href="/driver/open-orders">open orders</a>.</p>
+                <% } else { %>
+                    <% for (let order of orders) { %>
+                        <div>
+                            <%- include('driver-order-info', { order: order }) %>
+                            <p>Status: <%= order.status %></p>
+                            <form action="/driver/complete/<%= order._id %>" method="post" enctype="multipart/form-data">
+                                <input type="file" name="userFile">
+                                <input type="submit" value="Complete Delivery">
+                            </form>
+                        </div>
+                    <% } %>
+                <% } %>
+            <% } %>
+        <% } else { %>
+            <p class="error-message">ERROR: this page is for authenticated drivers only, please sign up or sign in to proceed.</p>
+        <% } %>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>
