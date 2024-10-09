@@ -66,6 +66,11 @@ nav .active {
     display: block;
     margin: 0 auto;
     width: 50%;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: gold;
 }
 
 .form-submit-image {
