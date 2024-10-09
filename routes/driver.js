@@ -23,13 +23,13 @@ const upload = multer({ storage: storage });
 
 
 router.get("/", (req, res) => {
-    res.redirect("/driver/open-orders");
+    return res.redirect("/driver/open-orders");
 });
 
 router.get("/open-orders", async (req, res) => {
     try {
         const orders = await Order.find({ status: "READY FOR DELIVERY" }).populate('itemOrdered');
-        res.render("driver.ejs", { session: req.session, currentPath: "/open-orders", orders: orders });
+        return res.render("driver.ejs", { session: req.session, currentPath: "/open-orders", orders: orders });
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -37,8 +37,13 @@ router.get("/open-orders", async (req, res) => {
 
 router.get("/fulfillment", async (req, res) => {
     try {
-        const orders = await Order.find({ deliverMan: req.session.driver._id, status: "IN TRANSIT" }).populate('itemOrdered');
-        res.render("driver.ejs", { session: req.session, currentPath: "/fulfillment", orders: orders });
+        if (req.session.driver) {
+            const orders = await Order.find({ deliverMan: req.session.driver._id, status: "IN TRANSIT" }).populate('itemOrdered');
+            return res.render("driver.ejs", { session: req.session, currentPath: "/fulfillment", orders: orders});
+        }
+        else {
+            return res.render("driver.ejs", { session: req.session, currentPath: "/fulfillment", orders: [] });
+        }
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -47,7 +52,7 @@ router.get("/fulfillment", async (req, res) => {
 router.post("/select/:id", async (req, res) => {
     try {
         const order = await Order.findByIdAndUpdate(req.params.id, {deliverMan: req.session.driver._id, status: "IN TRANSIT"});
-        res.redirect("/driver/open-orders");
+        return res.redirect("/driver/open-orders");
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -56,8 +61,10 @@ router.post("/select/:id", async (req, res) => {
 router.post("/complete/:id", upload.single("userFile"), async (req, res) => {
     try {
         if (!req.file) {
-            return res.status(500).send("No file uploaded.");
+            return res.status(500).send("ERROR: no file uploaded");
         }
+        const order = await Order.findByIdAndUpdate(req.params.id, {status: "DELIVERED", imgURL: req.file.path});
+        return res.redirect("/driver/fulfillment");
         const publicPath = '/' + req.file.path.replace(/^public[\\/]/, '').replace(/\\/g, '/');
         const order = await Order.findByIdAndUpdate(req.params.id, {status: "DELIVERED", imgURL: publicPath});
         res.redirect("/driver/fulfillment");

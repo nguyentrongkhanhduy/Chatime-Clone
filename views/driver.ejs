@@ -13,29 +13,35 @@
         <% if (session.isLoggedIn && session.role === "driver") { %>
             <nav>
                 <a href="/driver/open-orders" class="<%= currentPath === "/open-orders" ? 'active' : '' %>">Open Orders</a>
-                <a href="/driver/fulfillment" class="<%= currentPath === "/fulfillment" ? 'active' : '' %>">My Delivery Fulfillment</a>
+                <a href="/driver/fulfillment" class="<%= currentPath === "/fulfillment" ? 'active' : '' %>">My Delivery</a>
             </nav>
+
             <% if (currentPath === "/open-orders") { %>
                 <% if (orders.length === 0) { %>
                     <p class="error-message">No open orders for now.</p>
                 <% } else { %>
                     <% for (let order of orders) { %>
-                        <div>
+                        <div class="order-info-container">
                             <%- include('driver-order-info', { order: order }) %>
                             <form action="/driver/select/<%= order._id %>" method="post">
-                                <input type="submit" value="Deliver Order">
+                                <input type="submit" value="Deliver Order" class="btn margin-bottom">
                             </form>
                         </div>
                     <% } %>
                 <% } %>
+
             <% } else { %>
                 <% if (orders.length === 0) { %>
                     <p class="error-message">You do not have deliveries for now, you can select from <a href="/driver/open-orders">open orders</a>.</p>
                 <% } else { %>
                     <% for (let order of orders) { %>
-                        <div>
+                        <div class="order-info-container">
                             <%- include('driver-order-info', { order: order }) %>
                             <p>Status: <%= order.status %></p>
+                            <form action="/driver/complete/<%= order._id %>" method="post" enctype="multipart/form-data" class="form-submit-image">
+                                <h3 class="form-title">Upload a photo to confirm delivery</h3>
+                                <input type="file" name="userFile" required class="btn-file">
+                                <input type="submit" value="Complete Delivery" class="btn">
                             <form action="/driver/complete/<%= order._id %>" method="post" enctype="multipart/form-data">
                                 <input type="file" name="userFile" required>
                                 <input type="submit" value="Complete Delivery">
