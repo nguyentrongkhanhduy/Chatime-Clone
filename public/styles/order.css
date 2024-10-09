@@ -116,15 +116,17 @@ main {
   margin-bottom: 20px;
   width: 200px;
   background-color: rgb(114, 183, 10);
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .submit-order-button:hover {
   background-color: rgb(151, 225, 40);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 .submit-order-button:active {
   background-color: rgb(114, 183, 10);
+  box-shadow: none;
 }
 
 .order-summary {
@@ -190,15 +192,17 @@ main {
   font-size: 20px;
   padding: 12px;
   border-radius: 8px;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .search-order button:hover {
   background-color: rgb(151, 225, 40);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 .search-order button:active {
   background-color: rgb(114, 183, 10);
+  box-shadow: none;
 }
 
 .order-information {

@@ -32,6 +32,35 @@ main {
   font-size: 18px;
 }
 
+.nav-bar form input {
+  font-size: 14px;
+  padding: 8px 8px;
+  margin-right: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.nav-bar form button {
+  font-size: 14px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(114, 183, 10);
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.nav-bar form button:hover {
+  background-color: rgb(151, 225, 40);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.nav-bar form button:active {
+  background-color: rgb(114, 183, 10);
+  box-shadow: none;
+}
+
 .list-order-wrapper {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat; /* Prevent image from repeating */

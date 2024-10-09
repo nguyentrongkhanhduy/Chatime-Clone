@@ -14,6 +14,7 @@ const checkLoggedIn = (req, res, next) => {
   } else {
     res.redirect("/");
   }
+  // next();
 };
 
 router.get("/", checkLoggedIn, async (req, res) => {
@@ -71,6 +72,20 @@ router.get("/delivered", checkLoggedIn, async (req, res) => {
     return res.render("listOrder.ejs", {
       currentRoute: "/delivered",
       listOrder: listOrder,
+    });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+});
+
+router.post("/checkcustomer", checkLoggedIn, async (req, res) => {
+  try {
+    const customerOrder = await Order.find({ cusName: req.body.name })
+      .populate("itemOrdered")
+      .populate("deliverMan");
+    return res.render("listOrder.ejs", {
+      currentRoute: "/checkcustomer",
+      listOrder: customerOrder,
     });
   } catch (error) {
     return res.status(500).send(error.message);
