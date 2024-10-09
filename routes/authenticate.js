@@ -46,7 +46,7 @@ router.post("/authenticate/owner", async (req, res) => {
 
 router.post("/authenticate/driver", async (req, res) => {
   try {
-    console.log(req.body);
+    // console.log(req.body);
 
     const { username, password, fullName, vehicle, color, plate } = req.body;
     const sameUser = await User.find({ username: username });
@@ -71,7 +71,7 @@ router.post("/authenticate/driver", async (req, res) => {
       plate: plate,
     });
 
-    console.log(newDriver);
+    // console.log(newDriver);
 
     return res.render("authenticate.ejs", {
       same: false,

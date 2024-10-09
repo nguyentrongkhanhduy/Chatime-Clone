@@ -6,19 +6,22 @@ const Order = require("../models/Orders");
 const Driver = require("../models/Driver");
 
 const checkLoggedIn = (req, res, next) => {
-  if (req.session.hasOwnProperty("isLoggedIn") === true) {
+  if (
+    req.session.hasOwnProperty("isLoggedIn") === true &&
+    req.session.role === "owner"
+  ) {
     next();
   } else {
     res.redirect("/");
   }
 };
 
-router.get("/", async (req, res) => {
+router.get("/", checkLoggedIn, async (req, res) => {
   try {
     const listOrder = await Order.find()
       .populate("itemOrdered")
       .populate("deliverMan");
-    console.log(listOrder);
+    // console.log(listOrder);
     return res.render("listOrder.ejs", {
       currentRoute: "/list",
       listOrder: listOrder,
@@ -28,7 +31,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/ready", async (req, res) => {
+router.get("/ready", checkLoggedIn, async (req, res) => {
   try {
     const listOrder = await Order.find({
       status: "READY FOR DELIVERY",
@@ -42,7 +45,7 @@ router.get("/ready", async (req, res) => {
   }
 });
 
-router.get("/transit", async (req, res) => {
+router.get("/transit", checkLoggedIn, async (req, res) => {
   try {
     const listOrder = await Order.find({
       status: "IN TRANSIT",
@@ -58,7 +61,7 @@ router.get("/transit", async (req, res) => {
   }
 });
 
-router.get("/delivered", async (req, res) => {
+router.get("/delivered", checkLoggedIn, async (req, res) => {
   try {
     const listOrder = await Order.find({
       status: "DELIVERED",
