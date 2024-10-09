@@ -42,9 +42,6 @@
                                 <h3 class="form-title">Upload a photo to confirm delivery</h3>
                                 <input type="file" name="userFile" required class="btn-file">
                                 <input type="submit" value="Complete Delivery" class="btn">
-                            <form action="/driver/complete/<%= order._id %>" method="post" enctype="multipart/form-data">
-                                <input type="file" name="userFile" required>
-                                <input type="submit" value="Complete Delivery">
                             </form>
                         </div>
                     <% } %>
