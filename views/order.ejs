@@ -41,7 +41,9 @@
             <p><%=info.order.phone%></p>
             <p><%=info.order.itemOrdered.name%></p>
             <p><%=info.date%> at <%=info.time%></p>
-            <p><%=info.order.status%></p>
+            <p class="<%=info.order.status.split(' ')[0]%>">
+              <%=info.order.status%>
+            </p>
           </div>
         </div>
         <%} else {%>

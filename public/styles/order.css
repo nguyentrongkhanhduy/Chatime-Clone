@@ -228,3 +228,15 @@ main {
 .no-order {
   margin-top: 30px;
 }
+
+.READY {
+  color: green;
+}
+
+.IN {
+  color: blue;
+}
+
+.DELIVERED {
+  color: red;
+}
