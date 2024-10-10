@@ -96,6 +96,7 @@ main {
 
 .proof {
   display: flex;
+  column-gap: 25px;
 }
 
 .proof img {
