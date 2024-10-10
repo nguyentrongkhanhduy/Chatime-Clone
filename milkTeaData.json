@@ -3,350 +3,350 @@
         "name":"Chatime Pearl Milk Tea",
         "imgURL": "/img/Chatime-Pearl-Milk-Tea.png",
         "description":"Tapioca pearls add a pleasant texture to our signature milk tea, a best-selling fan favourite. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":5.59,
         "category":"signature-milk-tea"
     },
     {
         "name":"Chatime Roasted Milk Tea",
         "imgURL": "/img/Roasted-Milk-Tea.png",
         "description":"One of our most popular milk teas, Japanese Roasted Tea! Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":5.59,
         "category":"signature-milk-tea"
     },
     {
         "name":"Chatime Signature Milk Tea",
         "imgURL": "/img/Chatime-Milk-Tea.png",
         "description":"Our world famous milk tea, brewed from premium loose leaf black tea. Delicious and classic. For the tea lovers! Select any of our tea bases and have it made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk",
-        "price":8.75,
+        "price":5.49,
         "category":"signature-milk-tea"
     },
     {
         "name":"Chatime Triple",
         "imgURL": "/img/The-Chatime-Triple-Milk-Tea.png",
         "description":"Our popular roasted milk tea paired with our top three toppings: pearls, grass jelly, and pudding to create a decadent and flavourful combination. Perfect for when you want it all! Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":6.29,
         "category":"signature-milk-tea"
     },
     {
         "name":"Earl Grey Milk Tea",
         "imgURL": "/img/Earl-Grey-Milk-Tea.png",
         "description":"One of the most recognized flavoured teas in the world: bold and rich with a subtle hint of citrus and bergamot. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":5.49,
         "category":"signature-milk-tea"
     },
     {
         "name":"Genmaicha Milk Tea",
         "imgURL": "/img/Brown-Rice-Green-Milk-Tea.png",
         "description":"Rich and smooth with a subtle aroma of roasted rice. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":6.29,
         "category":"signature-milk-tea"
     },
     {
         "name":"Golden Lily Milk Tea",
         "imgURL": "/img/Golden-Lily-Tea-Latte.png",
         "description":"Our Golden Lily is an Alishan JinShyuan Tea that has a naturally creamy texture with an added hint of floral notes. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":5.49,
         "category":"signature-milk-tea"
     },
     {
         "name":"Grass Jelly Roasted Milk Tea",
         "imgURL": "/img/Grass-Jelly_Roasted-Milk-Tea.png",
         "description":"Our most popular drink! Grass jelly adds a satisfying texture to our delicious classic roasted milk tea. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":5.49,
         "category":"signature-milk-tea"
     },
     {
         "name":"Iron Goddess Milk Tea",
         "imgURL": "/img/Iron-Goddess-Milk-Tea-1.png",
         "description":"An Oolong-style tea, called Tieguanyin, that features a deep, robust flavour. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":5.49,
         "category":"signature-milk-tea"
     },
     {
         "name":"Jasmine Jade Green Milk Tea",
         "imgURL": "/img/Jasmine-Tea-Latte.png",
         "description":"A fragrant and delicate brew, paired with the rich creaminess of milk tea. Have this drink made in your choice of Signature Milk Tea, Fresh Milk or Oat Milk.",
-        "price":8.75,
+        "price":5.49,
         "category":"signature-milk-tea"
     },
     {
         "name":"Chocolate Malt Milk Tea",
         "imgURL": "/img/Chocolate-Malt-Milk-Tea.png",
         "description":"A sweet chocolate milk tea drink with subtle hints of malt",
-        "price":8.75,
+        "price":5.79,
         "category":"flavoured-milk-tea"
     },
     {
         "name":"Hazelnut Milk Tea",
         "imgURL": "/img/Caramel-Vanilla-Hazelnut-Milk-Tea.png",
         "description":"Sweet and creamy, with a hint of nuttiness, this milk tea is packed with flavour",
-        "price":8.75,
+        "price":5.79,
         "category":"flavoured-milk-tea"
     },
     {
         "name":"Honeydew Milk Tea",
         "imgURL": "/img/Honeydew-Milk-Tea.png",
         "description":"Like biting into a fresh honeydew melon, this drink offers bold and refreshing fruity flavours",
-        "price":8.75,
+        "price":5.79,
         "category":"flavoured-milk-tea"
     },
     {
         "name":"Salted Caramel Milk Tea",
         "imgURL": "/img/Caramel-Vanilla-Hazelnut-Milk-Tea.png",
         "description":"Our salted caramel milk tea is salty, sweet, and irresistibly buttery.",
-        "price":8.75,
+        "price":5.79,
         "category":"flavoured-milk-tea"
     },
     {
         "name":"Grapefruit Tea",
         "imgURL": "/img/Grapefruit-Green-Tea.png",
         "description":"Our jasmine green tea with bold and tangy citrus grapefruit flavours",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Lychee Tea",
         "imgURL": "/img/Lychee-Green-Tea.png",
         "description":"Full-bodied black tea flavour with a touch of tropical fruitiness",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Mango Grapefuit Tea",
         "imgURL": "/img/Mango-Grapefruit.png",
         "description":"A swirl of tropical mango mixed with tangy grapefruit",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Mango Tea",
         "imgURL": "/img/Mango-Green-Tea.png",
         "description":"The tropical flavour of juicy mango, combined with earthy green tea",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Passion Fruit Tea",
         "imgURL": "/img/Passionfruit-Green-Tea.png",
         "description":"A little sweet, a little tart – our passion fruit green tea is made with REAL passion fruit seeds which means it’s loaded with delicious, refreshing flavour!",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Peach Tea",
         "imgURL": "/img/Peach-Green-Tea.png",
         "description":"The soft and subtle sweetness of refreshing and fruity peach",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Peachy Lychee Tea",
         "imgURL": "/img/Peachy-Lychee-Green-Tea.png",
         "description":"Sweet peach flavour mixed with tropical lychee",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Strawberry Passion Tea",
         "imgURL": "/img/Strawberry-Passion.png",
         "description":"The perfect mix of sweet strawberry with tart passion fruit!",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Strawberry Tea",
         "imgURL": "/img/Strawberry-Greeen-tea.png",
         "description":"A floral green tea with a fruit strawberry flavour!",
-        "price":8.75,
+        "price":5.49,
         "category":"fruit-tea"
     },
     {
         "name":"Candied Winter Melon Iced tea",
         "imgURL": "/img/Candied-Winter-Melon-Ice-Tea.png",
         "description":"The perfect mix of sweet caramel notes as an iced tea",
-        "price":8.75,
+        "price":5.79,
         "category":"specialty-drinks"
     },
     {
         "name":"Candied Winter Melon Latte",
         "imgURL": "/img/Candied-Winter-Melon-Latte.png",
         "description":"The perfect mix of caramel-notes and creamy made with your choice of milk",
-        "price":8.75,
+        "price":5.79,
         "category":"specialty-drinks"
     },
     {
         "name":"Chocolate Hazelnut Delight",
         "imgURL": "/img/Hazelnut-Chocolate-Milk-Tea.png",
         "description":"Rich chocolate milk tea with toasted notes of roasted hazelnuts.",
-        "price":8.75,
+        "price":5.79,
         "category":"specialty-drinks"
     },
     {
         "name":"Handcrafted Taro",
         "imgURL": "/img/Taro-Milk_Tea.png",
         "description":"Real ground taro for a robust taste with a granular texture in this milk tea",
-        "price":8.75,
+        "price":5.79,
         "category":"specialty-drinks"
     },
     {
         "name":"Thai Milk Tea",
         "imgURL": "/img/Thai-Milk_Tea.png",
         "description":"Strongly brewed black tea with spices, finished with condensed milk and evaporated milk",
-        "price":8.75,
+        "price":5.79,
         "category":"specialty-drinks"
     },
     {
         "name":"QQ Grapefruit",
         "imgURL": "/img/QQ-Grapefruit-Juice.png",
         "description":"Our grapefruit juice has a tart citrus kick with a hint of sweetness. Topped with QQ, our topping that includes both our pearls and coconut jelly!",
-        "price":8.75,
+        "price":5.29,
         "category":"jelly-and-juice"
     },
     {
         "name":"QQ Lychee",
         "imgURL": "/img/QQ-Lychee-Juice.png",
         "description":"Refreshing tropical fruitiness of lychee topped with QQ, our topping that includes both our pearls and coconut jelly!",
-        "price":8.75,
+        "price":5.29,
         "category":"jelly-and-juice"
     },
     {
         "name":"QQ Mango",
         "imgURL": "/img/QQ-Mango-Juice.png",
         "description":"A tropical paradise of sweet and fruity mango. Topped with QQ, our topping that includes both our pearls and coconut jelly!",
-        "price":8.75,
+        "price":5.29,
         "category":"jelly-and-juice"
     },
     {
         "name":"QQ Passion Fruit",
         "imgURL": "/img/QQ-Passionfruit-Juice.png",
         "description":"A perfect combo of sweet, fruity, and tart with the addition of our real passion fruit seeds! Topped with QQ, our topping that includes both our pearls and coconut jelly!",
-        "price":8.75,
+        "price":5.29,
         "category":"jelly-and-juice"
     },
     {
         "name":"QQ Peach",
         "imgURL": "/img/QQ-Peach-Juice.png",
         "description":"Refreshingly fruity taste of peach. Topped with QQ, our topping that includes both our pearls and coconut jelly!",
-        "price":8.75,
+        "price":5.29,
         "category":"jelly-and-juice"
     },
     {
         "name":"QQ Strawberry",
         "imgURL": "/img/QQ-Strawberry.png",
         "description":"Our strawberry juice is made with real strawberry puree and topped with QQ, a topping that includes both our pearls and coconut jelly!",
-        "price":8.75,
+        "price":5.29,
         "category":"jelly-and-juice"
     },
     {
         "name":"Matcha Latte",
         "imgURL": "/img/Matcha-Tea-Latte.png",
         "description":"Earthy robust matcha tea mixed with your choice of milk for an added touch of richness",
-        "price":8.75,
+        "price":5.79,
         "category":"matcha"
     },
     {
         "name":"Matcha Strawberry Latte",
         "imgURL": "/img/Matcha-Strawberry-Latte.png",
         "description":"Earthy robust matcha tea mixed with your choice of milk for an added touch of richness",
-        "price":8.75,
+        "price":5.79,
         "category":"matcha"
     },
     {
         "name":"Matcha Smoothie",
         "imgURL": "/img/Matcha-Smoothie.png",
         "description":"The earthy taste of matcha green tea is blended into a frosty drink",
-        "price":8.75,
+        "price":5.99,
         "category":"matcha"
     },
     {
         "name":"Matcha Roasted Milk Tea",
         "imgURL": "/img/Matcha-Roasted-Milk-Tea.png",
         "description":"Perfect for tea lovers - our robust matcha tea layered with Chatime's famous Roasted Milk Tea",
-        "price":8.75,
+        "price":5.49,
         "category":"matcha"
     },
     {
         "name":"Matcha Milk Tea",
         "imgURL": "/img/Matcha-Milk-Tea.png",
         "description":"Our matcha tea created as a milk tea!",
-        "price":8.75,
+        "price":5.79,
         "category":"matcha"
     },
     {
         "name":"Brown Sugar Pearls with Fresh Milk",
         "imgURL": "/img/Brown-Sugar-Pearls-with-Fresh-Milk.png",
         "description":"Fresh milk with the added richness of caramelized brown sugar pearls and topped with sea salt crema",
-        "price":8.75,
+        "price":6.59,
         "category":"brown-sugar-pearls"
     },
     {
         "name":"Brown Sugar Pearls with Milk Tea",
         "imgURL": "/img/Brown-Sugar-Pearls-with-Milk-Tea.png",
         "description":"Our signature milk tea with the added richness of caramelized brown sugar pearls and topped with sea salt crema",
-        "price":8.75,
+        "price":6.59,
         "category":"brown-sugar-pearls"
     },
     {
         "name":"Brown Sugar Pearls with Oat Milk",
         "imgURL": "/img/Brown-Sugar-Pearls-with-Oat-Milk.png",
         "description":"Oat milk with the added richness of caramelized brown sugar pearls and topped with sea salt crema",
-        "price":8.75,
+        "price":7.79,
         "category":"brown-sugar-pearls"
     },
     {
         "name":"Peach Slush",
         "imgURL": "/img/Peach-Slush.png",
         "description":"Thick, frosty, and peachy sweet",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     },
     {
         "name":"Honeydew Slush",
         "imgURL": "/img/Honeydew-Slush.png",
         "description":"An icy blend of bold fruity, honeydew flavour!",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     },
     {
         "name":"Lychee Slush",
         "imgURL": "/img/Lychee-Slush.png",
         "description":"A hint of lychee with frosty tropical sweetness",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     },
     {
         "name":"Mango Smoothie",
         "imgURL": "/img/Mango-Smoothie.png",
         "description":"A frosty milky smoothie with big tropical mango flavour",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     },
     {
         "name":"Milk Tea Smoothie",
         "imgURL": "/img/Milk-Tea-Smoothie.png",
         "description":"Our signature best-selling milk tea blended into a creamy smoothie",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     },
     {
         "name":"Strawberry Smoothie",
         "imgURL": "/img/Strawberry-Smoothie.png",
         "description":"Just the perfect amount of tartness and sweetness with the added touch of delicious fruity strawberry!",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     },
     {
         "name":"Passion Fruit Slush",
         "imgURL": "/img/Passionfruit-Slush.png",
         "description":"A frosty combination of sweet and tart flavours, the perfectly balanced slush dotted with real passion fruit seeds!",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     },
     {
         "name":"Taro Smoothie",
         "imgURL": "/img/Taro-Smoothie.png",
         "description":"Frosty and creamy smoothie with robust real ground taro flavour",
-        "price":8.75,
+        "price":5.99,
         "category":"smoothie-&-slush"
     }
 ]

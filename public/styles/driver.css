@@ -67,6 +67,7 @@ nav .active {
     margin: 0 auto;
     width: 50%;
     transition: background-color 0.2s;
+    font-weight: bold;
 }
 
 .btn:hover {
@@ -78,6 +79,7 @@ nav .active {
     padding: 12px 12px 24px 12px;
     border-radius: 0 0 60px 60px;
     color: #693f7f;
+    font-weight: bold;
 }
 
 .btn-file {
