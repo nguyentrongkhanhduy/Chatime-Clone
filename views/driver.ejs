@@ -37,7 +37,6 @@
                     <% for (let order of orders) { %>
                         <div class="order-info-container">
                             <%- include('driver-order-info', { order: order }) %>
-                            <p>Status: <%= order.status %></p>
                             <form action="/driver/complete/<%= order._id %>" method="post" enctype="multipart/form-data" class="form-submit-image">
                                 <h3 class="form-title">Upload a photo to confirm delivery</h3>
                                 <input type="file" name="userFile" required class="btn-file">

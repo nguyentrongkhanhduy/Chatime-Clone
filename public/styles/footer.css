@@ -62,5 +62,9 @@ footer p {
 }
 
 .footer-link-list li a:hover {
-  color: #745884;
+  color: #5c2d91;
+}
+
+.purple-color {
+  color: #5c2d91;
 }
